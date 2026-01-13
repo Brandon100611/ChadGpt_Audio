@@ -94,6 +94,21 @@ def main_logic():
             except Exception as e:
                 print(f"Brain Error: {e}")
 
+def log_mood(user_input):
+    # A simple way to track vibes
+    positive_words = ["good", "great", "happy", "gym", "crushed", "worked"]
+    negative_words = ["tired", "sad", "fail", "lazy", "stuck"]
+    
+    score = 0
+    for word in user_input.lower().split():
+        if word in positive_words: score += 1
+        if word in negative_words: score -= 1
+        
+    with open("mood_log.txt", "a") as f:
+        f.write(f"Vibe Score: {score} | Input: {user_input}\n")
+    
+    return score
+
 # --- 7. EXECUTION ---
 if __name__ == "__main__":
     # Start the visual window on a background thread
