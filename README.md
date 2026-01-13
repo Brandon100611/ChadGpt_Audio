@@ -1,13 +1,55 @@
-# 💪 ChadGPT: The Giga-Chad Mentor
-**Character Persona:** ChadGPT (AI Older Brother)
+# 💪 ChadGPT — A Local AI Mentor System
 
-An emotionally aware AI mentor designed to help users become the best version of themselves. ChadGPT combines the wisdom of a therapist with the discipline of a gym partner.
+**ChadGPT** is a fully local, voice-first AI mentor designed to act as a calm, emotionally-aware older brother — combining the mindset of a therapist with the discipline of a gym coach.
 
-### ✨ Features
-* **Calm Authority:** Custom-tuned male voice frequency and speech rate for a "chill" mentor vibe.
-* **Insightful Coaching:** Leverages Llama 3 to provide supportive, non-robotic advice on fitness, programming, and life.
-* **Giga-Chad Interface:** High-resolution visual window using a multi-threaded Tkinter UI.
+This project was built to explore **multimodal AI interaction** (speech, reasoning, UI) without relying on paid APIs, while maintaining low latency and a natural conversational feel.
 
-### 🚀 Future Roadmap
-* **Mood Tracking:** Analyzing user sentiment to provide weekly progress reports.
-* **Game Dev Integration:** Allowing ChadGPT to assist with real-time Unity/Unreal Engine debugging through voice.
+---
+
+## 🧠 Why This Exists
+Most AI voice assistants rely on cloud APIs, subscriptions, or limited interaction models.  
+ChadGPT was built to answer a simple question:
+
+> *Can a free, fully local AI system feel supportive, responsive, and human — without sacrificing control or performance?*
+
+---
+
+## 🔧 Technical Overview
+
+**Core Stack**
+- **LLM:** Llama 3 via Ollama (local inference)
+- **Speech-to-Text:** Faster-Whisper (offline, low-latency)
+- **Text-to-Speech:** edge-tts with neural voices
+- **UI:** Tkinter (multi-threaded to avoid blocking audio or inference)
+- **Audio Playback:** Pygame
+- **Language:** Python
+
+**Key Engineering Challenges Solved**
+- Preventing audio playback blocking LLM inference
+- Managing concurrent UI + speech + reasoning threads
+- Eliminating paid API dependencies
+- Handling ambient noise and transcription accuracy
+- Designing a personality system prompt that feels supportive but grounded
+
+---
+
+## ✨ Features
+- **Voice-First Interaction:** Speak naturally, receive spoken responses
+- **Mentor Personality:** Calm, grounded, emotionally intelligent guidance
+- **Local & Free:** No OpenAI keys, no subscriptions
+- **Persistent Mood Logging:** Simple sentiment tracking for long-term reflection
+- **Always-On UI:** Visual presence without interfering with performance
+
+---
+
+## 🚀 Future Roadmap
+- Adaptive coaching based on long-term mood trends
+- Context-aware reminders (training, coding sessions)
+- Modular personality profiles
+- Potential integration with game development workflows (Unity / Unreal)
+
+---
+
+## 📌 Notes
+This project is experimental and built for learning, exploration, and system design practice.  
+It is **not** intended as a replacement for professional therapy or coaching.
